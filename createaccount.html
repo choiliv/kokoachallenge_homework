@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+</head>
+<body>
+    <header>
+        <h1>Create An Account</h1>
+    </header>
+    <form>
+    <div>
+        <label for="firstName">First name</label>
+        <input required id="firstName" type="text" placeholder="First name" />
+    </div>
+    <div>
+        <label for="lastName">Last name</label>
+        <input required id="lastName" type="text" placeholder="Last name" />
+    </div>
+    <div>
+        <label for="email" >Email</label>
+        <input required id="email" type="email" placeholder="Email" />
+    </div>
+    <div>
+        <label for="username">Username</label>
+        <input required id="username" type="text" placeholder="Username" />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input required id="password" type="password" placeholder="Password"
+            minlength="10" />
+    </div>
+    <div>
+        <label for="date">Birth date</label>
+        <input required id="date" type="date" placeholder="yyyy/mm/dd"/>
+        </div>
+        <div>
+         <label for="happyRate" >How happy are you?</label>
+            <input required id="happyRate" type="range" list="tickmarks"/>
+            <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+            </datalist>
+        </div>
+            <div>
+                <label for="color" >What is your fav. color?</label>
+                <input required id="color" type="color" />
+            </div>
+            <div>
+                <input type="submit" value="Creat Account" />
+            </div>
+  </form>
+</body>
+</html>
