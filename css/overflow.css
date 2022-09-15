@@ -1,0 +1,42 @@
+@import "reset.css";
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(255, 187, 62);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 30px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.input {
+    position:absolute;
+    top: 100px;
+    left: 20px;
+}
+.input__search {
+    border: none;
+    width: 450px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.input__search::placeholder {
+    color: rgb(0,0,0,0.5);
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color:  rgb(0,0,0,0.5);
+}
