@@ -1,6 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Ubuntu:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Ubuntu:wght@700&display=swap');
+@import "css/reset.css";
+
+
+:root {
+--shadow-color: 0 5px 8px rgb(210, 236, 246);
+--font-color: rgba(0,0,0,0.3);
+--name-color: rgba(0,0,0,0.8);
+}
 
 body {
     background-color: rgb(193, 239, 255);
@@ -10,9 +17,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.list {
+    position: relative;
+}
 
 .list,
-.playing {    background-color: white;
+.playing {   
+    background-color: white;
     border-radius: 20px;
     width: 300px;
     height: 650px;
@@ -20,14 +31,16 @@ body {
 }
 
 
-.list__header {
+.list__header, .playing__header {
        display: flex;
        justify-content: space-between;
        align-items: center;
        padding: 20px;
+       color: var(--font-color);
 }
 
-.list__singer-info {
+.list__singer-info,
+.playing__music-info {
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -41,17 +54,18 @@ body {
       height: 70px;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 10px var(--font-color);
 }
 
 .list__singer-name {
     font-size: larger;
     font-weight: 600;
+    color: var(--name-color);
 }
 
 .list__singer-genre {
     font-size: small;
-    color: rgba(0,0,0,0.3);
+    color: var(--font-color);
     margin-top: 10px;
 }
 
@@ -73,9 +87,9 @@ body {
     justify-content: center;
     align-items: center;
     border:none;
-    box-shadow: 0 5px 8px rgb(210, 236, 246);
+    box-shadow: var(--shadow-color);
     margin-right: 25px;
-    color: rgba(0,0,0,0.3);;
+    color: white;
 }
 
 .singer-btn__heart {
@@ -88,7 +102,7 @@ body {
     justify-content: center;
     align-items: center;
     border:none;
-    box-shadow: 0 5px 8px rgb(210, 236, 246);
+    box-shadow: var(--shadow-color);
     margin-left: 25;
 }
 
@@ -98,7 +112,7 @@ body {
 }
 
 .singer-btn__number {
-    color:rgba(0,0,0,0.3); 
+    color:var(--font-color); 
 }
 
 
@@ -119,7 +133,12 @@ body {
 }
 
 .music-list__music:nth-child(2) {
-    box-shadow: 0 5px 8px rgb(210, 236, 246);
+    box-shadow: var(--shadow-color);
+ 
+}
+
+.music-list__music:nth-child(2) span {
+    color: var(--name-color);
 }
 
 .music-list__bar {
@@ -152,7 +171,7 @@ body {
 
 .music__name-singer {
     font-size: 12px;
-    color: rgba(0,0,0,0.3);
+    color: var(--font-color);
 }
 
 .music__name-music {
@@ -161,12 +180,14 @@ body {
 }
 
 .list__music-playing {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
     background-color:rgb(189, 229, 254);
     width: 250px;
     height: 40px;
     border-radius: 30px;
     padding: 10px 20px;
-    margin: -15px 0 0 5px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 5px 5px 3px rgb(210, 236, 246);
@@ -181,7 +202,7 @@ body {
 
 .playing__name-singer {
     font-size: 8px;
-    color: rgba(0,0,0,0.3);
+    color: var(--font-color);
     margin-bottom: 3px;
 }
 
@@ -190,22 +211,28 @@ body {
     color:white;
 }
 
+.music__name-dot {
+    color:var(--font-color); 
+}
+
 .music-playing__button {
     border: none;
     background-color: rgb(189, 229, 254);
     justify-content: center;
     align-items: center;
     position: relative;
+    color: white;
 }
 
-.fa-backward-step {
+.list__music-playing>.fa-backward-step {
     position: absolute;
     right: -8px;
     top: 13px;
 }
 
-.fa-forward-step {
+.list__music-playing>.fa-forward-step {
     position: absolute;
     left: -8px;
     top: 13px;
 }
+

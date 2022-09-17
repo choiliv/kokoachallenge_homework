@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/musicplayer.css">
+    <link rel="stylesheet" href="css/musicplayerplaying.css">
 </head>
 <body>
 
@@ -106,19 +107,35 @@
 <div class="playing">
 
     <header class="playing__header">
-
-    </header>
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+       </header>
+  
 
     <section class="playing__music-info">
-
+      <img src="img/albumimg3.jpeg" class="playing__singer-img"/>
+      <span class="playing__music-name">Dacing Cartoon</span>
+      <span class="playing__singer-name">볼빨간 사춘기</span>
     </section>
 
     <section class="playing__music-bar">
-
+    <div class="music-bar__time">
+     <span>2:13</span>
+     <span>3:16</span>
+    </div>
+    <input type="range" class="music-bar__range">
     </section>
 
     <section class="playing__btn">
-
+           <button class="playing__btn-icons"><i class="fa-solid fa-repeat "></i></button>
+           <button class="playing__btn-icons"><i class="fa-solid fa-backward-step "></i></button>
+            <button class="playing__btn-icons">
+              <div class="btn-icons__play">
+                <i class="fa-solid fa-play"></i>
+                </div>
+              </button>
+           <button class="playing__btn-icons"><i class="fa-solid fa-forward-step "></i></button>
+           <button class="playing__btn-icons"><i class="fa-solid fa-shuffle"></i></button>
     </section>
 
 </div>
