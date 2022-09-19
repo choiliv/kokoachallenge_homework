@@ -1,3 +1,4 @@
+@import "component/nomobile.css";
 
 .friends__header {
     display: flex;
@@ -68,6 +69,23 @@
     bottom: 5px;
     left: 60px;
     color: rgb(255, 135, 155);
+    animation: scaleCake 2s ease-in-out;
+}
+
+@keyframes scaleCake {
+    0%{
+    
+    }
+     25%{
+       transform:translateY(-30px);
+    }
+    50% {
+        transform:rotateY(360deg);
+    }
+    100%{
+
+    }
+     
 }
 
 .friends__img{
@@ -87,3 +105,32 @@
     right: 20px;
     top: 60px;
 }
+
+
+
+@keyframes hideSplashScreen {
+    from {
+        opacity:1;
+    }
+    to { 
+        opacity:0;
+        visibility: hidden;
+    }
+ }
+ #splash-screen {
+    background-color: rgb(255, 185, 8);
+    position:absolute;
+    height: 100vh; /*100%의미*/
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    animation: hideSplashScreen 3s ease-in-out forwards;
+ }
+
+ .splash-screen__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+ }

@@ -5,8 +5,7 @@
 }
 
 .chattings__header-h1 {
-    font-size: 10px;
-}
+    font-size: 10px;}
 
 .chattings__header-icons i {
     font-size: 17px;
@@ -48,7 +47,7 @@
 
 .chattings__user-message {
     position: absolute;
-    right: 30px;
+    right: 5px;
     background-color: rgb(255, 196, 34);
     border-radius: 20px;
     border-bottom-right-radius: 0;
@@ -60,3 +59,46 @@
     align-items: center;
 }
 
+.chattings__input {
+    display: flex;
+    bottom:0;
+    position: fixed;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.fa-circle-plus {
+    position: absolute;
+    left: 5px;
+    font-size: 20px;
+}
+
+.chattings__input-typing {
+    width: 430px;
+    height: 30px;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 18px;
+    padding-left: 10px;
+}
+
+
+.chattings__input-btn {
+    display: flex;
+    border: none;
+    width:30px;
+    height: 30px;
+    border-radius:50%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+}
+
+.chattings__input-btn img{
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+}

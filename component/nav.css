@@ -32,5 +32,17 @@
     position: absolute;
     top: 2px;
     left: 30px;
+    animation: bounceAlarm 2s ease-in-out;
     
+}
+
+
+@keyframes bounceAlarm {
+    from {
+        transform: rotateY(0);
+
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
